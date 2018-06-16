@@ -8,9 +8,17 @@ import { Producto } from '../../../../models/producto';
 })
 export class SliderProductoItemComponent implements OnInit {
   @Input() producto:Producto;
-  constructor() { }
+  
+  constructor() {
+    
+   
+
+   }
 
   ngOnInit() {
   }
 
+  agregarItem(){
+    console.log(`agregado ${this.producto.id}:${this.producto.nombre}`)
+  }
 }
