@@ -8,6 +8,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { CanastaComponent } from './globals/canasta/canasta.component';
 import {appRouter} from './routing';
 import { CategoriaComponent } from './pages/categoria/categoria.component';
+<<<<<<< HEAD
+=======
+import { SliderProductoComponent } from './globals/slider/slider-producto/slider-producto.component';
+import { SliderProductoItemComponent } from './globals/slider/slider-producto/slider-producto-item/slider-producto-item.component';
+>>>>>>> 47e72b03b0175a951f7bc8a3cfdec6d1ff7ab304
 
 @NgModule({
   declarations: [
@@ -16,7 +21,13 @@ import { CategoriaComponent } from './pages/categoria/categoria.component';
     HeaderComponent,
     HomeComponent,
     CanastaComponent,
+<<<<<<< HEAD
     CategoriaComponent
+=======
+    CategoriaComponent,
+    SliderProductoComponent,
+    SliderProductoItemComponent
+>>>>>>> 47e72b03b0175a951f7bc8a3cfdec6d1ff7ab304
   ],
   imports: [
     BrowserModule,
