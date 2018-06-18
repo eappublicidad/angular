@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let unProducto of productos" >
-      <app-slider-producto-item class="producto-item" [producto]="unProducto"></app-slider-producto-item>
+      <app-slider-producto-item class="producto-item" [producto]="unProducto" (adicionar)="agregarItem($event);" ></app-slider-producto-item>
 
   </li>
 

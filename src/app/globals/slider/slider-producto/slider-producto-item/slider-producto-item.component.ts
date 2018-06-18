@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Producto } from '../../../../models/producto';
 
 @Component({
@@ -8,6 +8,7 @@ import { Producto } from '../../../../models/producto';
 })
 export class SliderProductoItemComponent implements OnInit {
   @Input() producto:Producto;
+  @Output() adicionar = new EventEmitter<Producto>();
   
   constructor() {
     
@@ -19,6 +20,13 @@ export class SliderProductoItemComponent implements OnInit {
   }
 
   agregarItem(){
-    console.log(`agregado ${this.producto.id}:${this.producto.nombre}`)
-  }
+    console.log(`agregado ${this.producto.id}:${this.producto.nombre}`);
+
+
+    this.adicionar.emit(this.producto);
+
+
+  };
+
+  
 }

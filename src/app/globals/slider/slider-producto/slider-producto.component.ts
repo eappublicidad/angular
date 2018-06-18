@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Producto } from '../../../models/producto';
 
 @Component({
@@ -7,7 +7,7 @@ import { Producto } from '../../../models/producto';
   styleUrls: ['./slider-producto.component.scss']
 })
 export class SliderProductoComponent implements OnInit {
-
+  
   @Output() adicionar:EventEmitter<Producto>;
   productos: Producto[];
 
@@ -32,5 +32,7 @@ export class SliderProductoComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+  agregarItem(producto: Producto){
+    console.log(`producto agregado ${producto.id}: ${producto.nombre} ${producto.precio} `);
+  }
 }
